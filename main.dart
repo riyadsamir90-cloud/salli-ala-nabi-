@@ -66,8 +66,7 @@ class _MainShellState extends State<MainShell> {
   final prayerNames = ['الفجر', 'الظهر', 'العصر', 'المغرب', 'العشاء'];
 
   // نقاط تشجيعية محدودة، ولا تقيس الإخلاص أو قيمة العبادة.
-  int get points => salawat.clamp(0, 100) + prayers.where((p) => p).length * 2 + dailyBonusClaimed;
-
+  int get points => salawat.clamp(0, 100).toInt() + prayers.where((p) => p).length * 2 + dailyBonusClaimed;
   final titles = ['الرئيسية', 'صلواتي', 'الأذكار', 'لوحة الشرف', 'حسابي'];
 
   @override
